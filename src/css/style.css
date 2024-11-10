@@ -618,6 +618,7 @@ html {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center;
+	box-shadow: 16px 0px 52px 0px #0e185033;
 }
 
 .subtitle {
@@ -1080,6 +1081,7 @@ html {
 		height: 208px;
 		border-radius: 10px;
 		position: relative;
+		box-shadow: 16px 16px 12px 1px #0e185033;
 	}
 
 	.about__image::after {
@@ -1189,6 +1191,7 @@ html {
 		background-color: #ffffff;
 		border-radius: 6px;
 		padding: 0 16px;
+		box-shadow: 0px 0px 15px 7px rgba(34, 60, 80, 0.2);
 	}
 
 	.price-desktop-list__wrap {
