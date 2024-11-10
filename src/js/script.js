@@ -161,9 +161,13 @@ window.addEventListener('DOMContentLoaded', () => {
 		const active = document.querySelector(
 			'.aside-menu-lang__link--active'
 		);
-		active
-			? active.classList.remove('aside-menu-lang__link--active')
-			: event.target.classList.add('aside-menu-lang__link--active');
+
+		if (event.target.classList.contains('slide-list__link--active')) {
+			return;
+		} else {
+			active.classList.remove('aside-menu-lang__link--active');
+			event.target.classList.add('aside-menu-lang__link--active');
+		}
 	};
 
 	const changeStateCallModal = () => {
