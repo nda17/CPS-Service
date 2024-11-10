@@ -119,6 +119,7 @@ html {
 	left: 0;
 	transform: translate(-500px);
 	padding: 16px 24px 32px 24px;
+	box-shadow: 16px 0px 52px 0px #0e185033;
 }
 
 .modal-call,
@@ -997,10 +998,6 @@ html {
 	.modal-call,
 	.modal-message {
 		min-width: 320px;
-	}
-
-	.aside-bar {
-		box-shadow: 16px 0px 52px 0px #0e185033;
 	}
 
 	.container {

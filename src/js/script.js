@@ -31,7 +31,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	const moreInfoTextAbout = document.querySelector('.about__control-name');
 	const arrowAbout = document.querySelector('.about__control-icon');
 	const hiddenTextAbout = document.querySelector('.about-text__hidden');
-
 	const btnMoreInfoRepair = document.querySelector('.repair__control');
 	const moreInfoTextRepair = document.querySelector(
 		'.repair__control-name'
@@ -66,19 +65,19 @@ window.addEventListener('DOMContentLoaded', () => {
 		if (menuModalActive) {
 			menuModalActive.classList.remove('aside-bar--active');
 			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			changeStateVeil();
 		}
 
 		if (modalCallActive) {
 			modalCallActive.classList.remove('modal-call--active');
 			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			changeStateVeil();
 		}
 
 		if (modalMessageActive) {
 			modalMessageActive.classList.remove('modal-message--active');
 			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			changeStateVeil();
 		}
 	};
 
