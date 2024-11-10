@@ -94,13 +94,12 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const slideListLinkActive = (event) => {
 		const active = document.querySelector('.slide-list__link--active');
-		active
-			? active.classList.remove('slide-list__link--active')
-			: event.target.classList.add('slide-list__link--active');
-	};
 
-	const handleEnter = (event) => {
-		if (event.key === 'Enter') {
+		if (event.target.classList.contains('slide-list__link--active')) {
+			return;
+		} else {
+			active.classList.remove('slide-list__link--active');
+			event.target.classList.add('slide-list__link--active');
 		}
 	};
 
@@ -146,8 +145,6 @@ window.addEventListener('DOMContentLoaded', () => {
 		const active = document.querySelector(
 			'.aside-menu-link__item--active'
 		);
-
-		console.log(event.target.closest('.aside-menu-link__item--active'));
 
 		if (event.target.closest('.aside-menu-link__item--active')) {
 			return;
@@ -219,7 +216,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	slideLink.forEach((el) =>
 		el.addEventListener('click', slideListLinkActive)
 	);
-	slideLink.forEach((el) => el.addEventListener('keydown', handleEnter));
 	btnMoreInfoAbout.addEventListener('click', changeStateTextAbout);
 	btnMoreInfoRepair.addEventListener('click', changeStateGroupRepair);
 	btnMoreInfoBrand.addEventListener('click', changeStateGroupBrand);
