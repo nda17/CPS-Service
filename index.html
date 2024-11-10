@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
 	<meta charset="UTF-8">
@@ -8,7 +8,7 @@
 	<title>CPS Service</title>
 	<meta name="description" content="Услуги и сервисы">
 	<link rel="stylesheet" href="./src/css/style.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
 
 <body>
@@ -42,7 +42,7 @@
 								<img src="./src/icons/nav-menu/profile.svg" alt="Профиль">
 							</a>
 						</li>
-						<span class='line-decor'></span>
+						<li class='line-decor'></li>
 					</ul>
 					<ul class='btn-menu'>
 						<li class='btn-menu__icon btn-menu__icon--mg'>
@@ -109,10 +109,11 @@
 					<span class='line line--mg'></span>
 					<h2 class='title__text'>Заказать звонок</h2>
 				</div>
-				<form action="">
+				<form action="/">
 					<label for="input-phone">
 						<span class="visually-hidden">Поле ввода номера телефона</span>
-						<input type="tel" name='input-phone' placeholder='Телефон' class='input-form input-form--mg' required>
+						<input type="tel" id='input-phone' placeholder='Телефон' autocomplete="on" class='input-form input-form--mg'
+							required>
 					</label>
 					<p class="modal-privacy-policy modal-privacy-policy--mg">
 						Нажимая “отправить”, вы даете согласие на <a class='modal-privacy-policy-link' href='#0'>обработку
@@ -121,7 +122,7 @@
 							конфиденциальности</a>
 					</p>
 					<button class="submit-form-button-wrap">
-						<span href='#0' class='submit-form-button'>Отправить ></span>
+						<span class='submit-form-button'>Отправить ></span>
 					</button>
 				</form>
 			</div>
@@ -132,19 +133,21 @@
 					<span class='line line--mg'></span>
 					<h2 class='title__text'>Обратная связь</h2>
 				</div>
-				<form action="">
+				<form action="/">
 					<label for="field-name">
 						<span class="visually-hidden">Поле имени</span>
-						<input type='text' name='field-name' placeholder='Имя' class='input-form input-form--mg' required>
+						<input type='text' id='field-name' placeholder='Имя' autocomplete="on" class='input-form input-form--mg'
+							required>
 					</label>
 					<label for="field-phone">
 						<span class="visually-hidden">Поле ввода номера телефона</span>
-						<input type='tel' name='field-phone' placeholder='Телефон' class='input-form input-form--mg' required>
+						<input type='tel' id='field-phone' placeholder='Телефон' autocomplete="on" class='input-form input-form--mg'
+							required>
 					</label>
 					<label for="field-email">
 						<span class="visually-hidden">Поле ввода адреса электронной почты</span>
-						<input type='email' name='field-email' placeholder='Электронная почта' class='input-form input-form--mg'
-							required>
+						<input type='email' id='field-email' placeholder='Электронная почта' autocomplete="on"
+							class='input-form input-form--mg' required>
 					</label>
 					<textarea class='textarea-form textarea-form--mg' placeholder='Сообщение'></textarea>
 					<p class="modal-privacy-policy modal-privacy-policy--mg">
@@ -154,7 +157,7 @@
 							конфиденциальности</a>
 					</p>
 					<button class="submit-form-button-wrap">
-						<span href='#0' class='submit-form-button'>Отправить ></span>
+						<span class='submit-form-button'>Отправить ></span>
 					</button>
 				</form>
 			</div>
@@ -185,7 +188,7 @@
 					<li><a class='slide-list__link' href='#0'>Специальные цены</a></li>
 					<li><a class='slide-list__link' href='#0'>Отзывы</a></li>
 				</ul>
-				<section class='about container'>
+				<div class='about container'>
 					<div class='about-text-wrap about-text-wrap--mg'>
 						<p class='about-text__visible about-text__visible--mg'>
 							Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
@@ -204,8 +207,8 @@
 						</div>
 					</div>
 					<div class='about__image'></div>
-				</section>
-				<section class='services'>
+				</div>
+				<div class='services'>
 					<h2 class='subtitle subtitle-services--mg'>Ремонт техники различных брендов</h2>
 					<span class='veil veil__services--height'></span>
 					<div class="brand-slider brand-slider--mg swiper-container">
@@ -312,8 +315,8 @@
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class='repair repair--mg'>
+				</div>
+				<div class='repair repair--mg'>
 					<h2 class='subtitle subtitle-repair--mg'>Ремонт различных видов техники</h2>
 					<span class='veil veil__repair--height'></span>
 					<div class="repair-slider swiper-container">
@@ -396,8 +399,8 @@
 							</div>
 						</div>
 					</div>
-				</section>
-				<section class='price price--mg'>
+				</div>
+				<div class='price price--mg'>
 					<h2 class='subtitle subtitle-price--mg '>Цены на услуги</h2>
 					<span class='veil veil__price--height'></span>
 					<div class="price-slider swiper-container">
@@ -540,8 +543,8 @@
 							</li>
 						</ul>
 					</div>
-				</section>
-				<section class='conditions container'>
+				</div>
+				<div class='conditions container'>
 					<p class='conditions__text conditions__text--mg'>
 						Все цены указаны с учетом НДС. Стоимость ремонта указана на
 						единичную услугу. Для
@@ -552,7 +555,7 @@
 						Получить коммерческое предложение
 						<span class='conditions-link__arrow-image'></span>
 					</a>
-				</section>
+				</div>
 				<footer class='footer container'>
 					<div class='footer-company-info'>
 						<p class='footer-company-info__year'>© 2019 CPS</p>
