@@ -167,7 +167,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const changeStateCallModal = () => {
-		const modalMessage = document.querySelector('.modal-message');
+		const modalMessageActive = document.querySelector(
+			'.modal-message--active'
+		);
 		const asideMenu = document.querySelector('.aside-bar--active');
 
 		if (asideMenu) {
@@ -175,8 +177,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			asideMenu.classList.remove('aside-bar--active');
 		}
 
-		if (modalMessage) {
-			modalMessage.classList.remove('modal-message--active');
+		if (modalMessageActive) {
+			changeStateMessageModal();
 		}
 
 		if (!modalCall.classList.contains('modal-call--active')) {
@@ -189,7 +191,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const changeStateMessageModal = () => {
-		const modalCall = document.querySelector('.modal-call');
+		const modalCallActive = document.querySelector('.modal-call--active');
 		const asideMenu = document.querySelector('.aside-bar--active');
 
 		if (asideMenu) {
@@ -197,8 +199,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			asideMenu.classList.remove('aside-bar--active');
 		}
 
-		if (modalCall) {
-			modalCall.classList.remove('modal-call--active');
+		if (modalCallActive) {
+			changeStateCallModal();
 		}
 
 		if (!modalMessage.classList.contains('modal-message--active')) {
