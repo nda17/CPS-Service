@@ -883,6 +883,7 @@ html {
 	letter-spacing: -0.15px;
 	border-radius: 16px;
 	transition: all 0.4s;
+	box-shadow: 0px 0px 15px 7px rgba(34, 60, 80, 0.2);
 }
 
 .order-button:hover,
@@ -1522,7 +1523,6 @@ html {
 	justify-content: center;
 	height: 160px;
 	overflow: hidden;
-	transition: all 0.1s;
 }
 
 .brand-card-desktop-wrap--mg {

@@ -46,13 +46,13 @@ window.addEventListener('DOMContentLoaded', () => {
 	const brandCardWrap = document.querySelector('.brand-card-desktop-wrap');
 
 	const changeStateVeil = () => {
-		!veil.classList.contains('page-container__veil--active')
-			? veil.classList.add('page-container__veil--active')
-			: veil.classList.remove('page-container__veil--active');
-
-		!body.classList.contains('body--scroll-ban')
-			? body.classList.add('body--scroll-ban')
-			: body.classList.remove('body--scroll-ban');
+		if (!veil.classList.contains('page-container__veil--active')) {
+			veil.classList.add('page-container__veil--active');
+			body.classList.add('body--scroll-ban');
+		} else {
+			veil.classList.remove('page-container__veil--active');
+			body.classList.remove('body--scroll-ban');
+		}
 	};
 
 	const clickVeilArea = () => {
@@ -64,19 +64,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
 		if (menuModalActive) {
 			menuModalActive.classList.remove('aside-bar--active');
-			body.classList.remove('body--scroll-ban');
 			changeStateVeil();
 		}
 
 		if (modalCallActive) {
 			modalCallActive.classList.remove('modal-call--active');
-			body.classList.remove('body--scroll-ban');
 			changeStateVeil();
 		}
 
 		if (modalMessageActive) {
 			modalMessageActive.classList.remove('modal-message--active');
-			body.classList.remove('body--scroll-ban');
 			changeStateVeil();
 		}
 	};
