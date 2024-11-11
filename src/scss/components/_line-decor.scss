@@ -1,0 +1,20 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.line-decor {
+	border: 2px solid variables.$color-light-gray;
+	height: 32px;
+	border-radius: 5px;
+}
+
+.line-decor--mg {
+	position: absolute;
+	left: 0;
+}
+
+@include mixins.xl {
+	.line-decor--mg {
+		left: auto;
+		right: 0;
+	}
+}

@@ -1,0 +1,168 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.side-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	&__link {
+		transition: all 0.4s;
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+
+	&__btn-close {
+		margin-right: 7.22px;
+	}
+
+	&__link-image {
+		width: 40px;
+		height: 40px;
+	}
+
+	&__link-image-logo {
+		transition: all 0.4s;
+		width: 103.44px;
+		height: 54.44px;
+		&:hover {
+			transform: scale(0.98);
+		}
+	}
+}
+
+.side-bar--mg {
+	margin-bottom: 20.78px;
+}
+
+.side-bar-wrap {
+	display: flex;
+	align-items: center;
+}
+
+.side-bar-link {
+	&__item {
+		position: relative;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		text-align: left;
+		padding-bottom: 24px;
+		user-select: none;
+		transition: all 0.4s;
+		&:hover {
+			transform: translateY(2px);
+		}
+	}
+
+	&__item--mg {
+		margin-bottom: 32px;
+	}
+
+	&__item--active {
+		color: variables.$color-hard-gray;
+	}
+
+	&__item--active::before {
+		content: url('../../icons/highlight.svg');
+		position: absolute;
+		left: -24px;
+		top: -5px;
+	}
+
+	&__item:last-child {
+		padding-bottom: 0;
+	}
+}
+
+.side-bar--mg-icon-block {
+	margin-bottom: 16px;
+	justify-content: inherit;
+}
+
+.side-bar-btn--mg {
+	margin-right: 16px;
+}
+
+.side-bar-email {
+	transition: all 0.4s;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-align: left;
+	&:hover {
+		color: variables.$color-hard-gray;
+	}
+}
+
+.side-bar-email--mg {
+	margin-bottom: 16px;
+}
+
+.side-bar-tel {
+	transition: all 0.4s;
+}
+
+.side-bar-tel {
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32px;
+	letter-spacing: -0.6px;
+	text-align: left;
+	&:hover {
+		color: variables.$color-hard-gray;
+	}
+}
+
+.side-bar-tel--mg {
+	margin-bottom: 8px;
+}
+
+.side-bar-lang {
+	&__link {
+		color: variables.$color-text;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		text-align: left;
+	}
+
+	&__link--active {
+		font-weight: 600;
+		color: variables.$color-hard-gray;
+	}
+
+	&__link {
+		user-select: none;
+	}
+}
+
+@include mixins.xxl {
+	.side-bar {
+		margin-bottom: 37px;
+
+		&__btn--close {
+			display: none;
+		}
+	}
+
+	.side-bar-link {
+		&__item {
+			padding-bottom: 28px;
+		}
+
+		&__item--mg {
+			margin-bottom: 241px;
+		}
+	}
+
+	.side-bar--mg-icon-block {
+		margin-bottom: 16.5px;
+	}
+
+	.side-bar-tel--mg {
+		margin-bottom: 40.8px;
+	}
+
+	.side-bar-email--mg {
+		margin-bottom: 12.5px;
+	}
+}

@@ -1,0 +1,21 @@
+@use '../../abstracts/mixins';
+
+.btn-burger-menu {
+	width: 40px;
+	height: 40px;
+	transition: all 0.4s;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.04);
+	}
+}
+
+.btn-burger-menu--mg {
+	margin-right: 20px;
+}
+
+@include mixins.xl {
+	.btn-burger-menu--mg {
+		margin-right: 0px;
+	}
+}
