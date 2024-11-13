@@ -1,0 +1,94 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.title {
+	display: flex;
+	justify-content: flex-start;
+	user-select: none;
+
+	&__text {
+		font-size: 24px;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+		font-weight: 800;
+	}
+}
+
+.line {
+	border-radius: 0 13px 13px 0;
+	width: 4px;
+	height: 40px;
+	background-color: variables.$color-hard-aqua;
+}
+
+.line--mg {
+	margin-right: 12px;
+}
+
+.title--mg {
+	margin-bottom: 24px;
+}
+
+.title-link-wrap {
+	display: none;
+}
+
+.title-link {
+	&__icons-link {
+		display: flex;
+		align-items: center;
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		transition: all 0.4s;
+		color: variables.$color-text;
+		&:hover {
+			color: variables.$color-hard-gray;
+		}
+	}
+
+	&__icons-icon {
+		width: 40px;
+		height: 40px;
+		padding-left: 8px;
+		transition: all 0.4s;
+		&:hover {
+			transform: scale(1.04);
+		}
+	}
+
+	&__icons--mg {
+		margin-right: 32px;
+	}
+}
+
+@include mixins.xl {
+	.title {
+		&__text {
+			font-size: 28px;
+		}
+
+		&__text--mg {
+			margin-right: 449px;
+		}
+	}
+
+	.line {
+		margin-right: 30px;
+		width: 3px;
+	}
+
+	.line--mg {
+		margin-right: 20px;
+	}
+
+	.title--mg {
+		padding-top: 42px;
+	}
+}
+
+@include mixins.xxl {
+	.title-link-wrap {
+		display: flex;
+	}
+}
