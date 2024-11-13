@@ -19,25 +19,27 @@
 		<header class='header header--mg'>
 			<nav class='nav-menu'>
 				<div class='nav-menu__wrap'>
-					<span class='btn-burger-menu btn-burger-menu--mg'>
+					<button type="button" class='btn-burger-menu btn-burger-menu--mg'>
 						<img src="./src/icons/nav-menu/burger.svg" alt="Бургер меню">
-					</span>
-					<a href='#home' class='header-logo header-logo--mg'>
+					</button>
+					<div class="header-logo-wrap">
 						<span class='line-decor line-decor--mg'></span>
-						<img class="header-logo__img" src="./src/icons/nav-menu/Logo.svg" alt="Логотип">
-					</a>
+						<a href='/' class='header-logo'>
+							<img class="header-logo__img" src="./src/icons/nav-menu/Logo.svg" alt="Логотип">
+						</a>
+					</div>
 				</div>
 				<div class='nav-menu__wrap'>
 					<ul class='btn-menu btn-menu--mode'>
 						<li class='btn-menu__icon btn-menu__icon--mg'>
-							<a href='#0' class='btn-modal-call'>
+							<button type="button" class='btn-modal-call'>
 								<img src="./src/icons/nav-menu/call.svg" alt="Позвонить">
-							</a>
+							</button>
 						</li>
 						<li class='btn-menu__icon btn-menu__icon--mg'>
-							<a href='#0' class='btn-modal-message'>
+							<button type="button" class='btn-modal-message'>
 								<img src="./src/icons/nav-menu/chat.svg" alt="Написать">
-							</a>
+							</button>
 						</li>
 						<li class='btn-menu__icon btn-menu__icon--mg'>
 							<a href='#0'>
@@ -65,9 +67,9 @@
 			<aside class='aside-bar'>
 				<div class='aside-menu aside-menu--mg'>
 					<div class='aside-menu-wrap'>
-						<a class='aside-menu__link aside-menu__link--close' href="#0">
+						<button type="button" class='aside-menu__link aside-menu__link--close'>
 							<img src="./src/icons/nav-menu/close.svg" alt="Закрыть" class='aside-menu__link-image'>
-						</a>
+						</button>
 						<a class='aside-menu__logo' href="#0">
 							<img src="./src/icons/nav-menu/Logo.svg" alt="Логотип" class='aside-menu__link-image-logo'>
 						</a>
@@ -76,23 +78,25 @@
 						<img src="./src/icons/nav-menu/checkstatus.svg" alt="Найти" class='aside-menu__link-image'>
 					</a>
 				</div>
-				<ul class='aside-menu-link'>
-					<li class='aside-menu-link__item'><a href="#0">Ремонт техники</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Услуги и сервисы</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Корпоративным клиентам</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Продавцам техники</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Партнерам</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Производителям</a></li>
-					<li class='aside-menu-link__item'><a href="#0">Наши сервисные центры</a></li>
-					<li class='aside-menu-link__item aside-menu-link__item--mg'><a href="#0">Контакты</a></li>
-				</ul>
+				<nav>
+					<ul class='aside-menu-link'>
+						<li class='aside-menu-link__item'><a href="#0">Ремонт техники</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Услуги и сервисы</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Корпоративным клиентам</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Продавцам техники</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Партнерам</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Производителям</a></li>
+						<li class='aside-menu-link__item'><a href="#0">Наши сервисные центры</a></li>
+						<li class='aside-menu-link__item aside-menu-link__item--mg'><a href="#0">Контакты</a></li>
+					</ul>
+				</nav>
 				<div class='aside-menu aside-menu--mg-icon-block'>
-					<a class='aside-menu__link aside-menu__link--mg-icon btn-modal-call' href="#0">
+					<button type="button" class='aside-menu__link aside-menu__link--mg-icon btn-modal-call'>
 						<img src="./src/icons/nav-menu/call.svg" alt="Позвонить" class='aside-menu__link-image'>
-					</a>
-					<a class='aside-menu__link aside-menu__link--mg-icon btn-modal-message' href="#0">
+					</button>
+					<button type="button" class='aside-menu__link aside-menu__link--mg-icon btn-modal-message' href="#0">
 						<img src="./src/icons/nav-menu/chat.svg" alt="Написать" class='aside-menu__link-image'>
-					</a>
+					</button>
 					<a class='aside-menu__link' href="#0">
 						<img src="./src/icons/nav-menu/profile.svg" alt="Профиль" class='aside-menu__link-image'>
 					</a>
@@ -106,7 +110,9 @@
 				</div>
 			</aside>
 			<div class="modal-call">
-				<img src="./src/icons/nav-menu/close.svg" alt="Закрыть" class='modal-call__btn-close modal-call__btn-close--mg'>
+				<button type="button" class='modal-call__btn-close modal-call__btn-close--mg'>
+					<img src="./src/icons/nav-menu/close.svg" alt="Закрыть">
+				</button>
 				<div class='title modal-title--mg'>
 					<span class='line line--mg'></span>
 					<h2 class='title__text'>Заказать звонок</h2>
@@ -129,8 +135,9 @@
 				</form>
 			</div>
 			<div class="modal-message">
-				<img src="./src/icons/nav-menu/close.svg" alt="Закрыть"
-					class='modal-message__btn-close modal-message__btn-close--mg'>
+				<button type="button" class='modal-message__btn-close modal-message__btn-close--mg'>
+					<img src="./src/icons/nav-menu/close.svg" alt="Закрыть">
+				</button>
 				<div class='title modal-title--mg'>
 					<span class='line line--mg'></span>
 					<h2 class='title__text'>Обратная связь</h2>
@@ -169,27 +176,30 @@
 					<h1 class='title__text title__text--mg'>Услуги и сервисы</h1>
 					<div class="title-link-wrap">
 						<span class='title-link__icons title-link__icons--mg'>
-							<a href="#0" class='title-link__icons-link'>Оставить заявку</a>
-							<a href='#0'>
+							<a href="#0" class='title-link__icons-link'>
+								Оставить заявку
 								<img src="./src/icons/nav-menu/repair.svg" alt="Оставить заявку" class='title-link__icons-icon'>
 							</a>
 						</span>
 						<span class='title-link__icons'>
-							<a href="#0" class='title-link__icons-link'>Статус ремонта</a>
-							<a href='#0'>
+							<a href="#0" class='title-link__icons-link'>
+								Статус ремонта
 								<img src="./src/icons/nav-menu/checkstatus.svg" alt="Статус ремонта" class='title-link__icons-icon'>
 							</a>
 						</span>
 					</div>
 				</div>
-				<ul class='slide-list slide-list--mg container'>
-					<li><a class='slide-list__link' href='#0'>Ремонтируемые бренды</a></li>
-					<li><a class='slide-list__link' href='#0'>Дополнительные услуги</a></li>
-					<li><a class='slide-list__link' href='#0'>Цены на услуги</a></li>
-					<li><a class='slide-list__link' href='#0'>Адреса сервисных центров</a></li>
-					<li><a class='slide-list__link' href='#0'>Специальные цены</a></li>
-					<li><a class='slide-list__link' href='#0'>Отзывы</a></li>
-				</ul>
+				<nav class="slide-list-wrap">
+					<span class='veil veil__slide-list--height'></span>
+					<ul class='slide-list slide-list--mg container'>
+						<li><a class='slide-list__link' href='#0'>Ремонтируемые бренды</a></li>
+						<li><a class='slide-list__link' href='#0'>Дополнительные услуги</a></li>
+						<li><a class='slide-list__link' href='#0'>Цены на услуги</a></li>
+						<li><a class='slide-list__link' href='#0'>Адреса сервисных центров</a></li>
+						<li><a class='slide-list__link' href='#0'>Специальные цены</a></li>
+						<li><a class='slide-list__link' href='#0'>Отзывы</a></li>
+					</ul>
+				</nav>
 				<div class='about container'>
 					<div class='about-text-wrap about-text-wrap--mg'>
 						<p class='about-text__visible about-text__visible--mg'>
@@ -201,14 +211,18 @@
 							количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь,
 							советуют нас родным и близким.
 						</p>
-						<div class='control about__control'>
+						<button type="button" class='control about__control'>
 							<div class="control-icon-wrap">
 								<span class='control-icon control-icon--mg about__control-icon'></span>
 							</div>
 							<span class='control-name about__control-name'>Читать далее</span>
-						</div>
+						</button>
 					</div>
-					<div class='about__image'></div>
+					<picture class="about-image-wrap">
+						<img src="./src/img/about/MG_320.png" alt="Фото офиса CPS-Service" class='about-image-wrap__picture'/>
+						<source srcset="./src/img/about/MG_768.png" media="(min-width: 768px)" />
+						<source srcset="./src/img/about/MG_1120.png" media="(min-width: 1440px)" />
+					</picture>
 				</div>
 				<div class='services'>
 					<h2 class='subtitle subtitle-services--mg'>Ремонт техники различных брендов</h2>

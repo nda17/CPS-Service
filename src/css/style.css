@@ -12,6 +12,11 @@ a {
 	color: inherit;
 }
 
+button {
+	background-color: transparent;
+	outline: none;
+}
+
 ul,
 ol,
 li {
@@ -403,8 +408,11 @@ html {
 	margin-right: 20px;
 }
 
-.header-logo {
+.header-logo-wrap {
 	position: relative;
+}
+
+.header-logo {
 	display: flex;
 	align-items: center;
 }
@@ -425,6 +433,9 @@ html {
 	border: 2px solid #eaeaea;
 	height: 32px;
 	border-radius: 5px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
 }
 
 .line-decor--mg {
@@ -484,6 +495,16 @@ html {
 
 .title-link-wrap {
 	display: none;
+}
+
+.slide-list-wrap {
+	position: relative;
+}
+
+.veil__slide-list--height {
+	top: 0;
+	right: 0;
+	height: 36px;
 }
 
 .slide-list {
@@ -611,15 +632,34 @@ html {
 	color: #7e7e82;
 }
 
-.about__image {
+.about-image-wrap {
+	max-width: 526px;
+	margin: 0 auto;
+	display: block;
+    height: 100%;
+	position: relative;
+	border-radius: 10px;
+	overflow: hidden;
+}
+.about-image-wrap::after {
+	content: '';
+	background-color: #000000;
+	opacity: 0.3;
+	position: absolute;
+	border-radius: 10px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+}
+
+.about-image-wrap__picture {
 	width: 100%;
 	height: 176px;
-	background-image: url('../img/about/MG_320.png');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	box-shadow: 16px 0px 52px 0px #0e185033;
 }
+
+
 
 .subtitle {
 	width: 100%;
@@ -1019,10 +1059,6 @@ html {
 		margin-right: 0px;
 	}
 
-	.header-logo--mg {
-		margin-right: 20px;
-	}
-
 	.line-decor--mg {
 		left: auto;
 		right: 0;
@@ -1076,26 +1112,8 @@ html {
 		margin-bottom: 0;
 	}
 
-	.about__image {
-		width: 50%;
-		background-image: url('../img/about/MG_768.png');
+	.about-image-wrap__picture {
 		height: 208px;
-		border-radius: 10px;
-		position: relative;
-		box-shadow: 16px 16px 12px 1px #0e185033;
-	}
-
-	.about__image::after {
-		content: '';
-		background-color: #000000;
-		opacity: 0.3;
-		position: absolute;
-		border-radius: 10px;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
 	}
 
 	.subtitle-services--mg,
@@ -1334,10 +1352,11 @@ html {
 	}
 
 	.title-link__icons-link {
+		display: flex;
+		align-items: center;
 		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.2px;
-		margin-right: 8px;
 		transition: all 0.4s;
 		color: #1b1c21;
 	}
@@ -1349,6 +1368,7 @@ html {
 	.title-link__icons-icon {
 		width: 40px;
 		height: 40px;
+		padding-left: 8px;
 		transition: all 0.4s;
 	}
 
@@ -1389,8 +1409,7 @@ html {
 		padding-bottom: 51px;
 	}
 
-	.about__image {
-		background-image: url('../img/about/MG_1120.png');
+	.about-image-wrap__picture {
 		max-width: 531px;
 		height: 307px;
 	}
