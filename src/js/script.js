@@ -48,10 +48,8 @@ window.addEventListener('DOMContentLoaded', () => {
 	const changeStateVeil = () => {
 		if (!veil.classList.contains('page-container__veil--active')) {
 			veil.classList.add('page-container__veil--active');
-			body.classList.add('body--scroll-ban');
 		} else {
 			veil.classList.remove('page-container__veil--active');
-			body.classList.remove('body--scroll-ban');
 		}
 	};
 
