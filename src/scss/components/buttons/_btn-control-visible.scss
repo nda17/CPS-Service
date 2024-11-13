@@ -1,0 +1,55 @@
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
+
+.btn-control-visible-wrap {
+	width: 100%;
+}
+
+.btn-control-visible {
+	display: flex;
+	height: 24px;
+	padding-left: 24px;
+}
+
+.btn-control-visible-icon-wrap {
+	width: 24px;
+	height: 24px;
+	position: relative;
+}
+
+.btn-control-visible-icon {
+	width: 7.41px;
+	height: 10.29px;
+	background-image: url('../../../icons/buttons/btn-control-visible/arrow.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.btn-control-visible-icon--mg {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.btn-control-visible-name {
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-align: left;
+	letter-spacing: -0.2px;
+	font-weight: 800;
+	transition: all 0.4s;
+	&:hover {
+		cursor: pointer;
+		color: variables.$color-hard-gray;
+	}
+}
+
+@include mixins.xxl {
+	.btn-control-visible {
+		padding-left: 32px;
+	}
+}
