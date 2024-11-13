@@ -1,3 +1,4 @@
+@use '../abstracts/variables';
 @use '../abstracts/mixins';
 
 .nav-menu {
@@ -13,8 +14,25 @@
 	}
 }
 
-.nav-menu-logo {
+.header-logo-wrap {
 	position: relative;
+}
+
+.line-decor {
+	border: 2px solid variables.$color-light-gray;
+	height: 32px;
+	border-radius: 5px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.line-decor--mg {
+	position: absolute;
+	left: 0;
+}
+
+.nav-menu-logo {
 	display: flex;
 	align-items: center;
 
@@ -58,8 +76,9 @@
 		justify-content: space-between;
 	}
 
-	.nav-menu-logo--mg {
-		margin-right: 20px;
+	.line-decor--mg {
+		left: auto;
+		right: 0;
 	}
 
 	.nav-menu-list--hidden {
