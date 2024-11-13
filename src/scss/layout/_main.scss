@@ -1,0 +1,22 @@
+@use '../abstracts/mixins';
+
+.main {
+	flex: 1 1 auto;
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+}
+
+@include mixins.xl {
+	.main {
+		width: 768px;
+		font-size: 25px;
+	}
+}
+
+@include mixins.xxl {
+	.main {
+		width: 1120px;
+		font-size: 30px;
+	}
+}
