@@ -267,7 +267,6 @@ html {
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	text-align: left;
-	padding-bottom: 24px;
 }
 
 .aside-menu-link__item,
@@ -300,7 +299,7 @@ html {
 .aside-menu-link__item--active::before {
 	content: url('../icons/highlight.svg');
 	position: absolute;
-	left: -24px;
+	left: -22px;
 	top: -5px;
 }
 
