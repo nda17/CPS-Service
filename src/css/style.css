@@ -1283,6 +1283,10 @@ html {
 	}
 
 	.aside-bar {
+		height: inherit;
+	}
+
+	.aside-bar {
 		width: 306px;
 		padding: 33.08px 29px 0 22px;
 		position: static;
