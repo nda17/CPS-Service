@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+.privacy-policy {
+	font-size: 14px;
+}
+
+.privacy-policy--mg {
+	margin-bottom: 19px;
+}
+
+.privacy-policy-link {
+	transition: all 0.4s;
+	color: variables.$color-pink;
+	font-size: 14px;
+	line-height: 16px;
+	&:hover {
+		color: variables.$color-black;
+	}
+}

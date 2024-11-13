@@ -42,12 +42,14 @@
 }
 
 .side-bar-link {
+	display: flex;
+	flex-direction: column;
+	row-gap: 24px;
 	&__item {
 		position: relative;
 		line-height: 24px;
 		letter-spacing: -0.2px;
 		text-align: left;
-		padding-bottom: 24px;
 		user-select: none;
 		transition: all 0.4s;
 		&:hover {
@@ -55,24 +57,20 @@
 		}
 	}
 
-	&__item--mg {
-		margin-bottom: 32px;
-	}
-
 	&__item--active {
 		color: variables.$color-hard-gray;
 	}
 
 	&__item--active::before {
-		content: url('../../icons/highlight.svg');
+		content: url('../../icons/side-bar/highlight.svg');
 		position: absolute;
-		left: -24px;
+		left: -22px;
 		top: -5px;
 	}
+}
 
-	&__item:last-child {
-		padding-bottom: 0;
-	}
+.side-bar-link--mg {
+	margin-bottom: 32px;
 }
 
 .side-bar--mg-icon-block {
@@ -145,13 +143,11 @@
 	}
 
 	.side-bar-link {
-		&__item {
-			padding-bottom: 28px;
-		}
+		row-gap: 28px;
+	}
 
-		&__item--mg {
-			margin-bottom: 241px;
-		}
+	.side-bar-link--mg {
+		margin-bottom: 241px;
 	}
 
 	.side-bar--mg-icon-block {

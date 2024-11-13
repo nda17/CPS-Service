@@ -2,6 +2,7 @@
 @use '../abstracts/mixins';
 
 .aside {
+	height: 100%;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -32,6 +33,7 @@
 
 @include mixins.xxl {
 	.aside {
+		height: inherit;
 		width: 306px;
 		padding: 33.08px 29px 0 22px;
 		position: static;
