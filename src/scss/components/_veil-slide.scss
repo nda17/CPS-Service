@@ -1,0 +1,41 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.veil-gradient {
+	position: absolute;
+	z-index: 10;
+	right: 0;
+	width: 24px;
+	background: linear-gradient(
+		270deg,
+		variables.$color-background 16.84%,
+		variables.$black-gradient 100%
+	);
+
+	&__slide-list--height {
+		top: 0;
+		right: 0;
+		height: 36px;
+	}
+
+	&__services--height {
+		top: 96px;
+		height: 71px;
+	}
+
+	&__repair--height {
+		top: 96px;
+		height: 159px;
+	}
+
+	&__price--height {
+		top: 72px;
+		height: 200px;
+	}
+}
+
+@include mixins.xl {
+	.veil-gradient {
+		display: none;
+	}
+}
