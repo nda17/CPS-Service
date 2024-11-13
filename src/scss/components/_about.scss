@@ -48,6 +48,7 @@
 	position: relative;
 	border-radius: 10px;
 	overflow: hidden;
+	transition: all 0.6s;
 	&::after {
 		content: '';
 		background-color: variables.$color-black;
@@ -90,6 +91,12 @@
 	.about-image-wrap__picture {
 		height: 208px;
 	}
+
+	.about-image-wrap {
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
 }
 
 @include mixins.xxl {
@@ -116,5 +123,11 @@
 
 	.about-text-wrap--mg {
 		margin-right: 36px;
+	}
+
+	.about-image-wrap {
+		&:hover {
+			transform: scale(1.04);
+		}
 	}
 }

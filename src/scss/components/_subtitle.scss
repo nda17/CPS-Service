@@ -1,0 +1,32 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.subtitle {
+	width: 100%;
+	text-transform: uppercase;
+	padding: 16px;
+	letter-spacing: -0.2px;
+	background-color: variables.$color-white;
+	color: variables.$color-hard-gray;
+	font-size: 18px;
+	line-height: 24px;
+	user-select: none;
+	background: linear-gradient(
+		90deg,
+		variables.$color-background 1.39%,
+		variables.$color-white 100%
+	);
+}
+
+@include mixins.xl {
+	.subtitle {
+		max-width: 100%;
+		padding-left: 24px;
+	}
+}
+
+@include mixins.xxl {
+	.subtitle {
+		padding-left: 32px;
+	}
+}
