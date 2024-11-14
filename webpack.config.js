@@ -1,6 +1,7 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
 const mode = process.env.NODE_ENV || 'development';
 const devMode = mode === 'development';
@@ -46,7 +47,7 @@ module.exports = {
 						loader: 'postcss-loader',
 						options: {
 							postcssOptions: {
-								plugins: [require('postcss-preset-env')]
+								plugins: [require('postcss-preset-env'), autoprefixer()]
 							}
 						}
 					},
@@ -63,7 +64,7 @@ module.exports = {
 				]
 			},
 			{
-        test: /\.(eot|ttf|woff|woff2)$/,
+				test: /\.(eot|ttf|woff|woff2)$/,
 				type: 'asset/resource',
 				generator: {
 					filename: 'fonts/[name][ext]'
