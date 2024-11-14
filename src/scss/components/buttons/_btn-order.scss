@@ -1,3 +1,5 @@
+@use '../../abstracts/variables';
+
 .btn-order {
 	width: 119px;
 	height: 32px;
@@ -5,12 +7,12 @@
 	align-items: center;
 	justify-content: center;
 	font-weight: 600;
-	color: #ffffff;
-	background-color: #ff3e79;
+	color: variables.$color-white;
+	background-color: variables.$color-pink;
 	letter-spacing: -0.15px;
 	border-radius: 16px;
 	transition: all 0.4s;
-	box-shadow: 0px 0px 15px 7px rgba(34, 60, 80, 0.2);
+	filter: drop-shadow(1px 1px 3px variables.$color-black);
 	&:hover {
 		transform: scale(0.98);
 	}
