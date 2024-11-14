@@ -37,6 +37,7 @@
 	align-items: center;
 
 	&__img {
+		box-sizing: content-box;
 		width: 96.55px;
 		height: 50.81px;
 		padding-left: 20px;
