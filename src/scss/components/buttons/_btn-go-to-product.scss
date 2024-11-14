@@ -1,0 +1,16 @@
+@use '../../abstracts/variables';
+
+.btn-go-to-product {
+	display: block;
+	width: 40px;
+	height: 40px;
+	background-image: url('../../../icons/pages/home-page/services/go.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	filter: drop-shadow(1px 1px 3px variables.$color-hard-gray);
+	transition: all 0.4s;
+	&:hover {
+		transform: scale(1.04);
+	}
+}
