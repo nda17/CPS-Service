@@ -1,14 +1,18 @@
+import Swiper from 'swiper';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+
 window.addEventListener('DOMContentLoaded', () => {
-	const body = document.querySelector('body');
 	const veil = document.querySelector('.page-container__veil');
-	const asideBarMenu = document.querySelector('.aside-bar');
+	const sideBar = document.querySelector('.aside');
 	const btnBurgerMenu = document.querySelector('.btn-burger-menu');
-	const btnMenuClose = document.querySelector('.aside-menu__link--close');
+	const btnSideBarClose = document.querySelector('.side-bar__btn-close');
 	const btnModalCallClose = document.querySelector(
-		'.modal-call__btn-close'
+		'.modal-call__btn--close'
 	);
 	const btnModalMessageClose = document.querySelector(
-		'.modal-message__btn-close'
+		'.modal-message__btn--close'
 	);
 	const modalCall = document.querySelector('.modal-call');
 	const btnCall = document.querySelectorAll('.btn-modal-call');
@@ -17,103 +21,115 @@ window.addEventListener('DOMContentLoaded', () => {
 	const btnMessage = document.querySelectorAll('.btn-modal-message');
 
 	const slideLink = document.querySelectorAll('.slide-list__link');
-	slideLink[0].classList.add('slide-list__link--active');
+	slideLink[0].classList.add('slide-list-link--active');
 
-	const langLink = document.querySelectorAll('.aside-menu-lang__link');
-	langLink[0].classList.add('aside-menu-lang__link--active');
+	const langLink = document.querySelectorAll('.side-bar-lang__link');
+	langLink[0].classList.add('side-bar-lang__link--active');
 
-	const asideMenuLink = document.querySelectorAll(
-		'.aside-menu-link__item '
+	const asideMenuLink = document.querySelectorAll('.side-bar-link__item ');
+	asideMenuLink[0].classList.add('side-bar-link__item--active');
+
+	const btnMoreInfoAbout = document.querySelector(
+		'.about__btn-control-visible'
 	);
-	asideMenuLink[0].classList.add('aside-menu-link__item--active');
-
-	const btnMoreInfoAbout = document.querySelector('.about__control');
-	const moreInfoTextAbout = document.querySelector('.about__control-name');
-	const arrowAbout = document.querySelector('.about__control-icon');
-	const hiddenTextAbout = document.querySelector('.about-text__hidden');
-
-	const btnMoreInfoRepair = document.querySelector('.repair__control');
+	const moreInfoTextAbout = document.querySelector(
+		'.about__btn-control-visible-name'
+	);
+	const arrowAbout = document.querySelector(
+		'.about__btn-control-visible-icon'
+	);
+	const hiddenTextAbout = document.querySelector(
+		'.about-text-wrap__hidden'
+	);
+	const btnMoreInfoRepair = document.querySelector(
+		'.repair__btn-control-visible'
+	);
 	const moreInfoTextRepair = document.querySelector(
-		'.repair__control-name'
+		'.repair__btn-control-visible-name'
 	);
-	const arrowRepair = document.querySelector('.repair__control-icon');
+	const arrowRepair = document.querySelector(
+		'.repair__btn-control-visible-icon'
+	);
 	const repairCardWrap = document.querySelector(
 		'.repair-card-desktop-wrap'
 	);
 
-	const btnMoreInfoBrand = document.querySelector('.brand__control');
-	const moreInfoTextBrand = document.querySelector('.brand__control-name');
-	const arrowBrand = document.querySelector('.brand__control-icon');
+	const btnMoreInfoBrand = document.querySelector(
+		'.brand__btn-control-visible'
+	);
+	const moreInfoTextBrand = document.querySelector(
+		'.brand__btn-control-visible-name'
+	);
+	const arrowBrand = document.querySelector(
+		'.brand__btn-control-visible-icon'
+	);
 	const brandCardWrap = document.querySelector('.brand-card-desktop-wrap');
 
 	const changeStateVeil = () => {
-		!veil.classList.contains('page-container__veil--active')
-			? veil.classList.add('page-container__veil--active')
-			: veil.classList.remove('page-container__veil--active');
-
-		!body.classList.contains('body--scroll-ban')
-			? body.classList.add('body--scroll-ban')
-			: body.classList.remove('body--scroll-ban');
+		if (!veil.classList.contains('page-container__veil--active')) {
+			veil.classList.add('page-container__veil--active');
+		} else {
+			veil.classList.remove('page-container__veil--active');
+		}
 	};
 
 	const clickVeilArea = () => {
-		const menuModalActive = document.querySelector('.aside-bar--active');
+		const menuModalActive = document.querySelector('.aside--active');
 		const modalCallActive = document.querySelector('.modal-call--active');
 		const modalMessageActive = document.querySelector(
 			'.modal-message--active'
 		);
 
 		if (menuModalActive) {
-			menuModalActive.classList.remove('aside-bar--active');
-			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			menuModalActive.classList.remove('aside--active');
+			changeStateVeil();
 		}
 
 		if (modalCallActive) {
 			modalCallActive.classList.remove('modal-call--active');
-			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			changeStateVeil();
 		}
 
 		if (modalMessageActive) {
 			modalMessageActive.classList.remove('modal-message--active');
-			body.classList.remove('body--scroll-ban');
-			veil.classList.remove('page-container__veil--active');
+			changeStateVeil();
 		}
 	};
 
 	const changeStateMenuModal = () => {
-		if (!asideBarMenu.classList.contains('aside-bar--active')) {
+		if (!sideBar.classList.contains('aside--active')) {
 			changeStateVeil();
-			asideBarMenu.classList.add('aside-bar--active');
+			sideBar.classList.add('aside--active');
 		} else {
 			changeStateVeil();
-			asideBarMenu.classList.remove('aside-bar--active');
+			sideBar.classList.remove('aside--active');
 		}
 	};
 
 	const slideListLinkActive = (event) => {
-		const active = document.querySelector('.slide-list__link--active');
+		const active = document.querySelector('.slide-list-link--active');
 
-		if (event.target.classList.contains('slide-list__link--active')) {
+		if (event.target.classList.contains('slide-list-link--active')) {
 			return;
 		} else {
-			active.classList.remove('slide-list__link--active');
-			event.target.classList.add('slide-list__link--active');
+			active.classList.remove('slide-list-link--active');
+			event.target.classList.add('slide-list-link--active');
 		}
 	};
 
 	const changeStateTextAbout = () => {
 		if (
-			!hiddenTextAbout.classList.contains('about-text__hidden--active')
+			!hiddenTextAbout.classList.contains(
+				'about-text-wrap__hidden--active'
+			)
 		) {
-			hiddenTextAbout.classList.add('about-text__hidden--active');
+			hiddenTextAbout.classList.add('about-text-wrap__hidden--active');
 			arrowAbout.style.transform = 'rotate(180deg)';
 			moreInfoTextAbout.innerText = 'Скрыть';
 		} else {
 			arrowAbout.style.transform = 'rotate(0deg)';
 			moreInfoTextAbout.innerText = 'Читать далее';
-			hiddenTextAbout.classList.remove('about-text__hidden--active');
+			hiddenTextAbout.classList.remove('about-text-wrap__hidden--active');
 		}
 	};
 
@@ -142,39 +158,39 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const asideMenuLinkActive = (event) => {
-		const active = document.querySelector(
-			'.aside-menu-link__item--active'
-		);
+		const active = document.querySelector('.side-bar-link__item--active');
 
-		if (event.target.closest('.aside-menu-link__item--active')) {
+		if (event.target.closest('.side-bar-link__item--active')) {
 			return;
 		} else {
-			active.classList.remove('aside-menu-link__item--active');
+			active.classList.remove('side-bar-link__item--active');
 			const parentCurrentItem = event.target.closest(
-				'.aside-menu-link__item'
+				'.side-bar-link__item'
 			);
-			parentCurrentItem.classList.add('aside-menu-link__item--active');
+			parentCurrentItem.classList.add('side-bar-link__item--active');
 		}
 	};
 
 	const langListLinkActive = (event) => {
-		const active = document.querySelector(
-			'.aside-menu-lang__link--active'
-		);
-		active
-			? active.classList.remove('aside-menu-lang__link--active')
-			: event.target.classList.add('aside-menu-lang__link--active');
+		const active = document.querySelector('.side-bar-lang__link--active');
+
+		if (event.target.classList.contains('slide-list-link--active')) {
+			return;
+		} else {
+			active.classList.remove('side-bar-lang__link--active');
+			event.target.classList.add('side-bar-lang__link--active');
+		}
 	};
 
 	const changeStateCallModal = () => {
 		const modalMessageActive = document.querySelector(
 			'.modal-message--active'
 		);
-		const asideMenu = document.querySelector('.aside-bar--active');
+		const asideMenu = document.querySelector('.aside--active');
 
 		if (asideMenu) {
 			changeStateVeil();
-			asideMenu.classList.remove('aside-bar--active');
+			asideMenu.classList.remove('aside--active');
 		}
 
 		if (modalMessageActive) {
@@ -192,11 +208,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 	const changeStateMessageModal = () => {
 		const modalCallActive = document.querySelector('.modal-call--active');
-		const asideMenu = document.querySelector('.aside-bar--active');
+		const asideMenu = document.querySelector('.aside--active');
 
 		if (asideMenu) {
 			changeStateVeil();
-			asideMenu.classList.remove('aside-bar--active');
+			asideMenu.classList.remove('aside--active');
 		}
 
 		if (modalCallActive) {
@@ -213,7 +229,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	btnBurgerMenu.addEventListener('click', changeStateMenuModal);
-	btnMenuClose.addEventListener('click', changeStateMenuModal);
+	btnSideBarClose.addEventListener('click', changeStateMenuModal);
 	veil.addEventListener('click', clickVeilArea);
 	slideLink.forEach((el) =>
 		el.addEventListener('click', slideListLinkActive)
@@ -239,6 +255,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	//Swiper
 	if (window.innerWidth < 768) {
 		new Swiper('.brand-slider', {
+			modules: [Autoplay, Navigation, Pagination],
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true
@@ -254,6 +271,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 
 		new Swiper('.repair-slider', {
+			modules: [Autoplay, Navigation, Pagination],
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true
@@ -269,6 +287,7 @@ window.addEventListener('DOMContentLoaded', () => {
 		});
 
 		new Swiper('.price-slider', {
+			modules: [Autoplay, Navigation, Pagination],
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true
