@@ -34,8 +34,10 @@
 }
 
 @include mixins.xl {
-	.title__text {
-		font-size: 28px;
+	.title {
+		&__text {
+			font-size: 28px;
+		}
 	}
 
 	.line--mg {
@@ -44,52 +46,55 @@
 }
 
 @include mixins.xxl {
-	.line {
+	.line--mg {
 		margin-right: 30px;
-		width: 3px;
 	}
 
 	.title--mg {
 		padding-top: 42px;
 	}
 
-	.title__text--mg {
-		margin-right: 449px;
+	.title {
+		&__text--mg {
+			margin-right: 449px;
+		}
 	}
 
 	.title-link-wrap {
 		display: flex;
 	}
 
-	.title-link__icons {
-		display: flex;
-		align-items: center;
-	}
-
-	.title-link__icons--mg {
-		margin-right: 32px;
-	}
-
-	.title-link__icons-link {
-		display: flex;
-		align-items: center;
-		font-size: 16px;
-		line-height: 24px;
-		letter-spacing: -0.2px;
-		transition: all 0.4s;
-		color: variables.$color-text;
-		&:hover {
-			color: variables.$color-hard-gray;
+	.title-link {
+		&__icons {
+			display: flex;
+			align-items: center;
 		}
-	}
 
-	.title-link__icons-link .title-link__icons-icon {
-		width: 40px;
-		height: 40px;
-		padding-left: 8px;
-		transition: all 0.4s;
-		&:hover {
-			transform: scale(1.04);
+		&__icons--mg {
+			margin-right: 32px;
+		}
+
+		&__icons-link {
+			display: flex;
+			align-items: center;
+			font-size: 16px;
+			line-height: 24px;
+			letter-spacing: -0.2px;
+			transition: all 0.4s;
+			color: variables.$color-text;
+			&:hover {
+				color: variables.$color-hard-gray;
+			}
+		}
+
+		&__icons-icon {
+			width: 40px;
+			height: 40px;
+			padding-left: 8px;
+			transition: all 0.4s;
+			&:hover {
+				transform: scale(1.04);
+			}
 		}
 	}
 }

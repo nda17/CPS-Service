@@ -60,6 +60,11 @@
 .textarea-form {
 	width: 100%;
 	resize: none;
+	outline: none;
+	border: 2px solid variables.$color-light-gray;
+	border-radius: 8px;
+	height: 118px;
+	padding: 12px 16px;
 	&::placeholder {
 		font-family: TT Lakes;
 		font-size: 16px;
@@ -71,6 +76,10 @@
 	&:focus {
 		border: 2px solid variables.$color-input;
 	}
+}
+
+.textarea-form--mg {
+	margin-bottom: 16px;
 }
 
 @include mixins.xl {
