@@ -47,20 +47,6 @@
 	margin-right: 16px;
 }
 
-.brand-slider__link {
-	width: 40px;
-	height: 40px;
-	background-image: url('../../../../icons/pages/home-page/services/go.svg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center center;
-	transition: all 0.4s;
-}
-
-.brand-slider__link:hover {
-	transform: scale(1.04);
-}
-
 .brand-card-desktop-container {
 	display: none;
 }
