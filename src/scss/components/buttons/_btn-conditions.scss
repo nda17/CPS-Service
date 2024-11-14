@@ -1,0 +1,40 @@
+@use '../../../abstracts/variables';
+@use '../../../abstracts/mixins';
+
+.btn-conditions {
+	display: block;
+	position: relative;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	transition: all 0.4s;
+	max-width: 192px;
+	&:hover {
+		color: variables.$color-hard-gray;
+	}
+
+	&__arrow-image {
+		display: block;
+		width: 24px;
+		height: 27.49px;
+		background-image: url('../../../../icons/pages/home-page/conditions/line-arrow.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		position: absolute;
+		left: 100px;
+		bottom: -3px;
+	}
+}
+
+@include mixins.xl {
+	.btn-conditions {
+		font-size: 16px;
+		max-width: 316px;
+
+		&__arrow-image {
+			left: 289px;
+			bottom: -2px;
+		}
+	}
+}
