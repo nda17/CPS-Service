@@ -1,5 +1,9 @@
 @use '../abstracts/mixins';
 
+main {
+	flex: 1 1 auto;
+}
+
 @include mixins.xl {
 	main {
 		width: 768px;
