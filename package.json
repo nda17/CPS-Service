@@ -1,9 +1,10 @@
 {
-	"name": "webpack-start-template",
+	"name": "cps-service",
 	"version": "1.0.0",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
+		"deploy": "gh-pages -d dist",
 		"dev-server": "webpack serve",
 		"build-dev": "webpack",
 		"build-prod": "webpack --node-env=production",
@@ -23,6 +24,7 @@
 		"babel-loader": "^9.2.1",
 		"copy-webpack-plugin": "^11.0.0",
 		"css-loader": "^6.11.0",
+		"gh-pages": "^6.2.0",
 		"group-css-media-queries-loader": "^4.3.0",
 		"html-loader": "^4.2.0",
 		"html-webpack-plugin": "^5.6.3",
