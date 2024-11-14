@@ -1,5 +1,5 @@
-@use '../../../abstracts/variables';
-@use '../../../abstracts/mixins';
+@use '../../abstracts/variables';
+@use '../../abstracts/mixins';
 
 .btn-conditions {
 	display: block;
@@ -17,7 +17,7 @@
 		display: block;
 		width: 24px;
 		height: 27.49px;
-		background-image: url('../../../../icons/pages/home-page/conditions/line-arrow.svg');
+		background-image: url('../../../icons/buttons/btn-conditions/line-arrow.svg');
 		background-size: cover;
 		background-repeat: no-repeat;
 		background-position: center center;
