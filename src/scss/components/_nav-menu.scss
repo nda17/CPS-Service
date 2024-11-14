@@ -71,6 +71,12 @@
 	display: none;
 }
 
+.btn-modal-profile,
+.btn-modal-repair,
+.btn-modal-search {
+	filter: drop-shadow(1px 1px 3px variables.$color-black);
+}
+
 @include mixins.xl {
 	.nav-menu {
 		justify-content: space-between;

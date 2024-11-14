@@ -9,6 +9,7 @@
 	letter-spacing: -0.2px;
 	transition: all 0.4s;
 	max-width: 192px;
+	filter: drop-shadow(1px 1px 3px variables.$color-medium-gray);
 	&:hover {
 		color: variables.$color-hard-gray;
 	}
