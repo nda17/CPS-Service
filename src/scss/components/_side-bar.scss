@@ -128,6 +128,9 @@
 		line-height: 24px;
 		letter-spacing: -0.2px;
 		text-align: left;
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
 	&__link--active {
