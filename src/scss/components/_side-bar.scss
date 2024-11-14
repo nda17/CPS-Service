@@ -122,7 +122,9 @@
 
 .side-bar-lang {
 	&__link {
+		font-family: TTLakes;
 		color: variables.$color-text;
+		font-size: 16px;
 		line-height: 24px;
 		letter-spacing: -0.2px;
 		text-align: left;
