@@ -11,10 +11,15 @@
 	background-color: variables.$color-pink;
 	letter-spacing: -0.15px;
 	border-radius: 16px;
+	filter: drop-shadow(1px 1px 1.5px variables.$color-black);
 	transition: all 0.4s;
-	filter: drop-shadow(1px 1px 3px variables.$color-black);
 	&:hover {
-		transform: scale(0.98);
+		cursor: pointer;
+		transition: all 0.2s;
+		transform: scale(1.01);
+	}
+	&:active {
+		transform: scale(0.99);
 	}
 }
 

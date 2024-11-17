@@ -38,8 +38,8 @@
 
 	&__img {
 		box-sizing: content-box;
-		width: 96.55px;
-		height: 50.81px;
+		width: 85px;
+		height: 50px;
 		padding-left: 20px;
 		padding-right: 20px;
 		transition: all 0.4s;
@@ -53,16 +53,6 @@
 .nav-menu-list {
 	display: flex;
 
-	&__icon {
-		width: 40px;
-		height: 40px;
-		transition: all 0.4s;
-	}
-
-	&__icon:hover {
-		transform: scale(1.04);
-	}
-
 	&__icon--mg {
 		margin-right: 20px;
 	}
@@ -70,12 +60,6 @@
 
 .nav-menu-list--hidden {
 	display: none;
-}
-
-.btn-modal-profile,
-.btn-modal-repair,
-.btn-modal-search {
-	filter: drop-shadow(1px 1px 3px variables.$color-black);
 }
 
 @include mixins.xl {

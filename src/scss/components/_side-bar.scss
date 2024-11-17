@@ -17,22 +17,16 @@
 		margin-right: 7.22px;
 	}
 
-	&__link-image {
-		width: 40px;
-		height: 40px;
-	}
-
-	&__btn-search,
-	&__btn-profile {
-		filter: drop-shadow(1px 1px 3px variables.$color-black);
-	}
-
 	&__link-image-logo {
 		transition: all 0.4s;
 		width: 103.44px;
 		height: 54.44px;
 		&:hover {
-			transform: scale(0.98);
+			transform: scale(1.01);
+		}
+		&:active {
+			transition: all 0.1s;
+			transform: scale(0.95);
 		}
 	}
 }
