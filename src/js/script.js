@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const veil = document.querySelector('.page-container__veil');
 	const sideBar = document.querySelector('.aside');
 	const btnBurgerMenu = document.querySelector('.btn-burger-menu');
-	const btnSideBarClose = document.querySelector('.side-bar__btn-close');
+	const btnSideBarClose = document.querySelector('.btn-close');
 	const btnModalCallClose = document.querySelector(
 		'.modal-call__btn--close'
 	);
