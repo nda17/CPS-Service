@@ -4,32 +4,76 @@
 .veil-gradient {
 	position: absolute;
 	z-index: 10;
-	right: 0;
-	width: 24px;
-	background: linear-gradient(
-		270deg,
-		variables.$color-background 16.84%,
-		variables.$black-gradient 100%
-	);
 
-	&__slide-list--height {
+	&__right {
+		background: linear-gradient(
+			270deg,
+			variables.$color-background 16.84%,
+			variables.$black-gradient 100%
+		);
+	}
+
+	&__left {
+		background: linear-gradient(
+			90deg,
+			variables.$color-background 16.84%,
+			variables.$black-gradient 100%
+		);
+	}
+
+	&__slide-list-right--size {
 		top: 0;
 		right: 0;
+		width: 25px;
 		height: 36px;
 	}
 
-	&__services--height {
-		top: 72px;
+	&__slide-list-left--size {
+		top: 0;
+		left: 0;
+		width: 25px;
+		height: 36px;
+	}
+
+	&__services-right--size {
+		top: 0px;
+		right: 0;
+		width: 45px;
 		height: 71px;
 	}
 
-	&__repair--height {
-		top: 72px;
+	&__services-left--size {
+		top: 0px;
+		left: 0;
+		width: 45px;
+		height: 71px;
+	}
+
+	&__repair-right--size {
+		top: 0px;
+		right: 0;
+		width: 45px;
 		height: 159px;
 	}
 
-	&__price--height {
-		top: 72px;
+	&__repair-left--size {
+		top: 0px;
+		left: 0;
+		width: 45px;
+		height: 159px;
+	}
+
+	&__price-right--size {
+		top: 0px;
+		right: 0;
+		width: 45px;
+		height: 200px;
+	}
+
+	&__price-left--size {
+		top: 0px;
+		left: 0;
+		width: 45px;
 		height: 200px;
 	}
 }
