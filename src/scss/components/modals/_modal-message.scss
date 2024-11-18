@@ -18,10 +18,10 @@
 	right: 0;
 	transform: translate(500px);
 	padding: 24px 16px 75px 16px;
+}
 
-	&__btn-close--mg {
-		margin-bottom: 40px;
-	}
+.btn-close-modal-message--mg {
+	margin-bottom: 40px;
 }
 
 .modal-message--active {
@@ -86,12 +86,12 @@
 	.modal-message {
 		min-width: 320px;
 		max-width: 420px;
+	}
 
-		&__btn-close--mg {
-			margin-top: 16px;
-			margin-bottom: 0px;
-			margin-left: -90px;
-		}
+	.btn-close-modal-message--mg {
+		margin-top: 16px;
+		margin-bottom: 0px;
+		margin-left: -90px;
 	}
 
 	.modal-title--mg {

@@ -48,10 +48,10 @@
 
 .nav-menu-list {
 	display: flex;
+}
 
-	&__icon--mg {
-		margin-right: 20px;
-	}
+.nav-menu-list--gap {
+	gap: 20px;
 }
 
 .nav-menu-list--hidden {

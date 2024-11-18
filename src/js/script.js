@@ -9,10 +9,10 @@ window.addEventListener('DOMContentLoaded', () => {
 	const btnBurgerMenu = document.querySelector('.btn-burger-menu');
 	const btnSideBarClose = document.querySelector('.btn-close');
 	const btnModalCallClose = document.querySelector(
-		'.modal-call__btn--close'
+		'.btn-close-modal-call'
 	);
 	const btnModalMessageClose = document.querySelector(
-		'.modal-message__btn--close'
+		'.btn-close-modal-message'
 	);
 	const modalCall = document.querySelector('.modal-call');
 	const btnCall = document.querySelectorAll('.btn-modal-call');
