@@ -47,6 +47,16 @@
 	}
 }
 
+@include mixins.touch-in-use {
+	.footer {
+		&__privacy-policy {
+			&:active {
+				color: variables.$color-black;
+			}
+		}
+	}
+}
+
 @include mixins.mouse-in-use {
 	.footer {
 		&__privacy-policy {

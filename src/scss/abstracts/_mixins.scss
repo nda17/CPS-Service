@@ -11,13 +11,13 @@
 }
 
 @mixin mouse-in-use() {
-	@media (hover: hover) and (pointer: fine) {
+	@media (hover: hover) {
 		@content;
 	}
 }
 
 @mixin touch-in-use() {
-	@media (hover: none) and (pointer: coarse) {
+	@media (hover: none) {
 		@content;
 	}
 }

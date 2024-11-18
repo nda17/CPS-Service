@@ -29,29 +29,17 @@
 	background-color: variables.$color-white;
 	border-radius: 6px;
 	border: 2px solid variables.$color-light-aqua;
+	color: variables.$color-black;
 }
 
 .slide-list--mg {
 	margin-bottom: 24px;
 }
 
-@include mixins.touch-in-use {
-	.slide-list {
-		&__link {
-			&:focus {
-				color: variables.$color-black;
-			}
-		}
-	}
-}
-
 @include mixins.mouse-in-use {
 	.slide-list {
 		&__link {
 			&:hover {
-				color: variables.$color-black;
-			}
-			&:focus {
 				color: variables.$color-black;
 			}
 		}

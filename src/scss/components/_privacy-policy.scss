@@ -23,3 +23,11 @@
 		}
 	}
 }
+
+@include mixins.touch-in-use {
+	.privacy-policy-link {
+		&:active {
+			color: variables.$color-black;
+		}
+	}
+}

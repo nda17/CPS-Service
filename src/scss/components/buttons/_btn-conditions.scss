@@ -25,6 +25,14 @@
 	}
 }
 
+@include mixins.touch-in-use {
+	.btn-conditions {
+		&:active {
+			color: variables.$color-hard-gray;
+		}
+	}
+}
+
 @include mixins.mouse-in-use {
 	.btn-conditions {
 		&:hover {
