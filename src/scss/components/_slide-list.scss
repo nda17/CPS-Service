@@ -22,9 +22,6 @@
 		padding: 8px 16.54px;
 		border: 2px solid transparent;
 		transition: all 0.4s;
-		&:hover {
-			color: variables.$color-black;
-		}
 	}
 }
 
@@ -36,6 +33,29 @@
 
 .slide-list--mg {
 	margin-bottom: 24px;
+}
+
+@include mixins.touch-in-use {
+	.slide-list {
+		&__link {
+			&:focus {
+				color: variables.$color-black;
+			}
+		}
+	}
+}
+
+@include mixins.mouse-in-use {
+	.slide-list {
+		&__link {
+			&:hover {
+				color: variables.$color-black;
+			}
+			&:focus {
+				color: variables.$color-black;
+			}
+		}
+	}
 }
 
 @include mixins.xl {

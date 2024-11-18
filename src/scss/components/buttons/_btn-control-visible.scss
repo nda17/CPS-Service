@@ -7,15 +7,9 @@
 
 .btn-control-visible {
 	display: flex;
+	align-items: center;
 	height: 24px;
-	padding-left: 24px;
 	filter: drop-shadow(1px 1px 3px variables.$color-light-gray);
-}
-
-.btn-control-visible-icon-wrap {
-	width: 24px;
-	height: 24px;
-	position: relative;
 }
 
 .btn-control-visible-icon {
@@ -28,12 +22,7 @@
 }
 
 .btn-control-visible-icon--mg {
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-	margin: auto;
+	margin-right: 6px;
 }
 
 .btn-control-visible-name {
@@ -43,14 +32,13 @@
 	letter-spacing: -0.2px;
 	font-weight: 800;
 	transition: all 0.4s;
-	&:hover {
-		cursor: pointer;
-		color: variables.$color-hard-gray;
-	}
 }
 
-@include mixins.xxl {
-	.btn-control-visible {
-		padding-left: 32px;
+@include mixins.mouse-in-use {
+	.btn-control-visible-name {
+		&:hover {
+			cursor: pointer;
+			color: variables.$color-hard-gray;
+		}
 	}
 }

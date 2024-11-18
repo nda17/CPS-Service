@@ -27,42 +27,42 @@ window.addEventListener('DOMContentLoaded', () => {
 	langLink[0].classList.add('side-bar-lang__link--active');
 
 	const asideMenuLink = document.querySelectorAll('.side-bar-link__item ');
-	asideMenuLink[0].classList.add('side-bar-link__item--active');
+	asideMenuLink[1].classList.add('side-bar-link__item--active');
 
 	const btnMoreInfoAbout = document.querySelector(
-		'.about__btn-control-visible'
+		'.about-btn-control-visible'
 	);
 	const moreInfoTextAbout = document.querySelector(
-		'.about__btn-control-visible-name'
+		'.about-btn-control-visible__name'
 	);
 	const arrowAbout = document.querySelector(
-		'.about__btn-control-visible-icon'
+		'.about-btn-control-visible__icon'
 	);
 	const aboutTextWrap = document.querySelector('.about-text-section');
 	const aboutTextHidden = document.querySelector(
 		'.about-text-section__hidden'
 	);
 	const btnMoreInfoRepair = document.querySelector(
-		'.repair__btn-control-visible'
+		'.repair-btn-control-visible'
 	);
 	const moreInfoTextRepair = document.querySelector(
-		'.repair__btn-control-visible-name'
+		'.repair-btn-control-visible__name'
 	);
 	const arrowRepair = document.querySelector(
-		'.repair__btn-control-visible-icon'
+		'.repair-btn-control-visible__icon'
 	);
 	const repairCardWrap = document.querySelector(
 		'.repair-card-desktop-wrap'
 	);
 
 	const btnMoreInfoBrand = document.querySelector(
-		'.brand__btn-control-visible'
+		'.brand-btn-control-visible'
 	);
 	const moreInfoTextBrand = document.querySelector(
-		'.brand__btn-control-visible-name'
+		'.brand-btn-control-visible__name'
 	);
 	const arrowBrand = document.querySelector(
-		'.brand__btn-control-visible-icon'
+		'.brand-btn-control-visible__icon'
 	);
 	const brandCardWrap = document.querySelector('.brand-card-desktop-wrap');
 
@@ -155,14 +155,14 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const changeStateGroupBrand = () => {
-		if (!brandCardWrap.classList.contains('brandCardWrap--active')) {
-			brandCardWrap.classList.add('brandCardWrap--active');
+		if (!brandCardWrap.classList.contains('brand-card-wrap--active')) {
+			brandCardWrap.classList.add('brand-card-wrap--active');
 			arrowBrand.style.transform = 'rotate(180deg)';
 			moreInfoTextBrand.innerText = 'Показать меньше';
 		} else {
 			arrowBrand.style.transform = 'rotate(0deg)';
 			moreInfoTextBrand.innerText = 'Показать все';
-			brandCardWrap.classList.remove('brandCardWrap--active');
+			brandCardWrap.classList.remove('brand-card-wrap--active');
 		}
 	};
 

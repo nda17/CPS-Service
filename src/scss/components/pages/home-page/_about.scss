@@ -75,6 +75,14 @@
 	}
 }
 
+@include mixins.mouse-in-use {
+	.about-image-wrap {
+		&:hover {
+			transform: scale(1.03);
+		}
+	}
+}
+
 @include mixins.xl {
 	.about {
 		display: flex;
@@ -97,12 +105,6 @@
 
 	.about-image-wrap__picture {
 		height: 208px;
-	}
-
-	.about-image-wrap {
-		&:hover {
-			transform: scale(1.03);
-		}
 	}
 }
 
@@ -130,11 +132,5 @@
 
 	.about-text-wrap--mg {
 		margin-right: 36px;
-	}
-
-	.about-image-wrap {
-		&:hover {
-			transform: scale(1.04);
-		}
 	}
 }

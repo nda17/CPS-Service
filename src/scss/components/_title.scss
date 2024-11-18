@@ -33,6 +33,16 @@
 	display: none;
 }
 
+@include mixins.mouse-in-use {
+	.title-link {
+		&__icons-link {
+			&:hover {
+				color: variables.$color-hard-gray;
+			}
+		}
+	}
+}
+
 @include mixins.xl {
 	.title {
 		&__text {
@@ -82,9 +92,6 @@
 			letter-spacing: -0.2px;
 			transition: all 0.4s;
 			color: variables.$color-text;
-			&:hover {
-				color: variables.$color-hard-gray;
-			}
 		}
 
 		&__icons-icon {

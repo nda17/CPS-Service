@@ -1,4 +1,5 @@
 @use '../abstracts/variables';
+@use '../abstracts/mixins';
 
 .privacy-policy {
 	font-size: 14px;
@@ -13,7 +14,12 @@
 	color: variables.$color-pink;
 	font-size: 14px;
 	line-height: 16px;
-	&:hover {
-		color: variables.$color-black;
+}
+
+@include mixins.mouse-in-use {
+	.privacy-policy-link {
+		&:hover {
+			color: variables.$color-black;
+		}
 	}
 }

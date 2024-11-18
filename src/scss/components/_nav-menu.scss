@@ -44,10 +44,6 @@
 		padding-right: 20px;
 		transition: all 0.4s;
 	}
-
-	&__img:hover {
-		transform: scale(1.04);
-	}
 }
 
 .nav-menu-list {
@@ -60,6 +56,26 @@
 
 .nav-menu-list--hidden {
 	display: none;
+}
+
+@include mixins.touch-in-use {
+	.nav-menu-logo {
+		&__img:active {
+			transform: scale(0.97);
+		}
+	}
+}
+
+@include mixins.mouse-in-use {
+	.nav-menu-logo {
+		&__img:hover {
+			transform: scale(1.03);
+		}
+
+		&__img:active {
+			transform: scale(0.97);
+		}
+	}
 }
 
 @include mixins.xl {
