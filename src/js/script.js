@@ -38,8 +38,9 @@ window.addEventListener('DOMContentLoaded', () => {
 	const arrowAbout = document.querySelector(
 		'.about__btn-control-visible-icon'
 	);
-	const hiddenTextAbout = document.querySelector(
-		'.about-text-wrap__hidden'
+	const aboutTextWrap = document.querySelector('.about-text-section');
+	const aboutTextHidden = document.querySelector(
+		'.about-text-section__hidden'
 	);
 	const btnMoreInfoRepair = document.querySelector(
 		'.repair__btn-control-visible'
@@ -118,30 +119,38 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	const changeStateTextAbout = () => {
-		if (
-			!hiddenTextAbout.classList.contains(
-				'about-text-wrap__hidden--active'
-			)
-		) {
-			hiddenTextAbout.classList.add('about-text-wrap__hidden--active');
-			arrowAbout.style.transform = 'rotate(180deg)';
-			moreInfoTextAbout.innerText = 'Скрыть';
+		if (!aboutTextWrap.classList.contains('about-text-section--active')) {
+			aboutTextWrap.classList.add('about-text-section--active');
+			aboutTextHidden.classList.add('about-text-section__hidden--active');
+			setTimeout(() => {
+				arrowAbout.style.transform = 'rotate(180deg)';
+				moreInfoTextAbout.innerText = 'Скрыть';
+			}, 300);
 		} else {
-			arrowAbout.style.transform = 'rotate(0deg)';
-			moreInfoTextAbout.innerText = 'Читать далее';
-			hiddenTextAbout.classList.remove('about-text-wrap__hidden--active');
+			aboutTextWrap.classList.remove('about-text-section--active');
+			aboutTextHidden.classList.remove(
+				'about-text-section__hidden--active'
+			);
+			setTimeout(() => {
+				arrowAbout.style.transform = 'rotate(0deg)';
+				moreInfoTextAbout.innerText = 'Читать далее';
+			}, 300);
 		}
 	};
 
 	const changeStateGroupRepair = () => {
-		if (!repairCardWrap.classList.contains('repairCardWrap--active')) {
-			repairCardWrap.classList.add('repairCardWrap--active');
-			arrowRepair.style.transform = 'rotate(180deg)';
-			moreInfoTextRepair.innerText = 'Показать меньше';
+		if (!repairCardWrap.classList.contains('repair-card-wrap--active')) {
+			repairCardWrap.classList.add('repair-card-wrap--active');
+			setTimeout(() => {
+				arrowRepair.style.transform = 'rotate(180deg)';
+				moreInfoTextRepair.innerText = 'Показать меньше';
+			}, 300);
 		} else {
-			arrowRepair.style.transform = 'rotate(0deg)';
-			moreInfoTextRepair.innerText = 'Показать все';
-			repairCardWrap.classList.remove('repairCardWrap--active');
+			repairCardWrap.classList.remove('repair-card-wrap--active');
+			setTimeout(() => {
+				arrowRepair.style.transform = 'rotate(0deg)';
+				moreInfoTextRepair.innerText = 'Показать все';
+			}, 300);
 		}
 	};
 

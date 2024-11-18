@@ -12,8 +12,21 @@
 
 .about-text-wrap {
 	padding: 0 16px;
+}
 
-	&__visible {
+.about-text-section {
+	max-height: 83px;
+	overflow: hidden;
+	margin-bottom: 16px;
+	transition: all 0.75s;
+
+	&__hidden {
+		opacity: 0.3;
+		transition: inherit;
+	}
+
+	&__visible,
+	&__hidden {
 		font-size: 14px;
 		user-select: none;
 	}
@@ -21,19 +34,14 @@
 	&__visible--mg {
 		margin-bottom: 16px;
 	}
+}
 
-	&__hidden {
-		font-size: 14px;
-		display: none;
-	}
+.about-text-section--active {
+	max-height: 156px;
+}
 
-	&__hidden--mg {
-		margin-bottom: 16px;
-	}
-
-	&__hidden--active {
-		display: block;
-	}
+.about-text-section__hidden--active {
+	opacity: 1;
 }
 
 .about-text-wrap--mg {
